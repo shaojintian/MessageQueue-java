@@ -2,11 +2,14 @@ package common;
 
 import io.netty.buffer.ByteBuf;
 import lombok.Data;
+import lombok.extern.java.Log;
+import lombok.extern.slf4j.Slf4j;
 import util.JsonUtil;
 
 import java.nio.charset.Charset;
 
 /** super class **/
+@Slf4j
 @Data
 public abstract class Message <T extends MessageBody>{
 

@@ -1,4 +1,8 @@
 package common;
 
-public class OperationResult {
+import lombok.Data;
+
+@Data
+public abstract class OperationResult extends MessageBody {
+
 }

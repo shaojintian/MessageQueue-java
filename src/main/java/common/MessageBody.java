@@ -1,4 +1,4 @@
 package common;
 
-public class MessageBody {
+public abstract class MessageBody {
 }

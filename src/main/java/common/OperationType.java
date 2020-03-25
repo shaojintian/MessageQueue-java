@@ -1,4 +1,7 @@
 package common;
 
-public class OperationType {
+public enum  OperationType {
+
+    AUTH
+
 }
