@@ -22,5 +22,57 @@ public class Message implements Serializable {
     private Date initTime;      //create message time
     private String log;         //message flow log
 
-    
+
+    /**
+     * constructors
+     */
+    public Message(){
+
+    }
+
+    public Message(String topic,String data){
+        this.topic=topic;
+        this.data=data;
+    }
+
+    public Message(String topic,String data,Date effectTime){
+        this.topic=topic;
+        this.data=data;
+        this.effectTime = effectTime;
+    }
+
+    public Message(String topic,String data,long shardingID){
+        this.topic=topic;
+        this.data=data;
+        this.shardingID = shardingID;
+    }
+
+    //clone message
+    public Message(Message message) {
+        this.id = message.id;
+        this.topic = message.topic;
+        this.group = message.group;
+        this.data = message.data;
+        this.status = message.status;
+        this.retryCount = message.retryCount;
+        this.shardingID = message.shardingID;
+        this.timeout = message.timeout;
+        this.effectTime = message.effectTime;
+        this.initTime = message.initTime;
+        this.log = message.log;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
