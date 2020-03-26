@@ -62,7 +62,93 @@ public class Message implements Serializable {
         this.log = message.log;
     }
 
+    public long getId() {
+        return id;
+    }
 
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getTopic() {
+        return topic;
+    }
+
+    public void setTopic(String topic) {
+        this.topic = topic;
+    }
+
+    public String getGroup() {
+        return group;
+    }
+
+    public void setGroup(String group) {
+        this.group = group;
+    }
+
+    public String getData() {
+        return data;
+    }
+
+    public void setData(String data) {
+        this.data = data;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public int getRetryCount() {
+        return retryCount;
+    }
+
+    public void setRetryCount(int retryCount) {
+        this.retryCount = retryCount;
+    }
+
+    public long getShardingID() {
+        return shardingID;
+    }
+
+    public void setShardingID(long shardingId) {
+        this.shardingID = shardingId;
+    }
+
+    public Date getEffectTime() {
+        return effectTime;
+    }
+
+    public void setEffectTime(Date effectTime) {
+        this.effectTime = effectTime;
+    }
+
+    public int getTimeout() {
+        return timeout;
+    }
+
+    public void setTimeout(int timeout) {
+        this.timeout = timeout;
+    }
+
+    public Date getInitTime() {
+        return initTime;
+    }
+
+    public void setInitTime(Date initTime) {
+        this.initTime = initTime;
+    }
+
+    public String getLog() {
+        return log;
+    }
+
+    public void setLog(String log) {
+        this.log = log;
+    }
 
 
 
