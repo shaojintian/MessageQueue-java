@@ -151,7 +151,22 @@ public class Message implements Serializable {
     }
 
 
-
+    @Override
+    public String toString() {
+        return "XxlMqMessage{" +
+                "id=" + id +
+                ", topic='" + topic + '\'' +
+                ", group='" + group + '\'' +
+                ", data='" + data + '\'' +
+                ", status='" + status + '\'' +
+                ", retryCount=" + retryCount +
+                ", shardingID=" + shardingID +
+                ", timeout=" + timeout +
+                ", effectTime=" + effectTime +
+                ", initTime=" + initTime +
+                ", log='" + log + '\'' +
+                '}';
+    }
 
 
 
