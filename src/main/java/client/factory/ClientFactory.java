@@ -12,6 +12,8 @@ import java.util.Map;
 import java.util.UUID;
 import java.lang.reflect.*;
 
+import com.xxl.rpc.remoting.invoker.XxlRpcInvokerFactory;
+
 /**
  * @author sjt 2020-03-29 17:39:55
  */
@@ -23,7 +25,7 @@ public class ClientFactory {
     private String adminAddress;
     private String accessToken;
     private List<IConsumer> consumerList ;
-    private ArrayList<ConsumerThread>  consumerThreads;
+
 
     public void setAdminAddress(String adminAddress){this.adminAddress = adminAddress};
 
@@ -42,14 +44,28 @@ public class ClientFactory {
         //pre : valid consumer
         makeConsumerValid();
 
-        //startBrokerService
+        //start
         startBrokerService();
+
+        startConsumer();
+
+    }
+
+    public void destroyFactory(){
+
+        destoryFactoryThreadPool();
+
+        destroyConsumer();
+
+        destroyBrokerService();
 
     }
 
 
 
-    // -----------------valid consumer-------------
+    // ----------------- consumer service---------
+    private ArrayList<ConsumerThread>  consumerThreads;
+
     private void makeConsumerValid(){
 
         //check
@@ -102,11 +118,14 @@ public class ClientFactory {
 
     }
 
-    private void startBrokerService(){
-
-    }
-
     private void startConsumer(){
+        //check valid
+        if(consumerThreads==null||consumerThreads.size()==0){
+            logger.warn(">>>>>>>> mq-java,cannot startConsumer");
+            return;
+        }
+        //registry consumer
+
 
     }
 
@@ -114,7 +133,20 @@ public class ClientFactory {
 
     }
 
+    //-----------------broker service ------------
+    private
+
+
+    private void startBrokerService(){
+
+    }
     private void destroyBrokerService(){
+
+    }
+
+
+   //------------thread pool
+    private void destoryFactoryThreadPool(){
 
     }
 
