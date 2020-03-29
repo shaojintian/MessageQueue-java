@@ -1,9 +1,8 @@
 package client.producer;
 
-import java.util.Set;
 import java.util.Date;
 import client.message.Message;
-import client.consumer.Consumer;
+import client.consumer.annotation.Consumer;
 import client.message.MessageStatus;
 import util.IpUtil;
 import util.LogHelper;
