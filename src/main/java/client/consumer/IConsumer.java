@@ -1,4 +1,4 @@
 package client.consumer;
 
-public class IConsumer {
+public interface IConsumer {
 }
